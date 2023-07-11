@@ -1,0 +1,106 @@
+local plr = game:GetService("Players").LocalPlayer
+local  char = plr.Character
+local mouse = plr:GetMouse()
+char.Humanoid.WalkSpeed = 100
+char.Humanoid.JumpPower = 70
+local BruddaCount = 0
+spawn(function()
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("BasePart") then
+        coroutine.wrap(function()
+            for i=0,1,.1 do
+                wait()
+                v.Transparency = v.Transparency +i
+            end
+        end)()
+    end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("Accessory") then
+        coroutine.wrap(function()
+            for i=0,1,.1 do
+                wait()
+                v.Handle.Transparency = v.Handle.Transparency +i
+            end
+        end)()
+    end
+end
+end)
+char.Head.face:Destroy()
+wait(1)
+local do_u_no_de_wae = Instance.new("Sound",char)
+do_u_no_de_wae.SoundId = "rbxassetid://1316175800"
+do_u_no_de_wae.Volume = 10
+
+local Speach = Instance.new("Sound",char)
+Speach.SoundId = "rbxassetid://1311432465"
+Speach.Volume = 10
+
+local spitt = Instance.new("Sound",char)
+spitt.SoundId = "rbxassetid://1322795266"
+spitt.Volume = 10
+
+local daqueen = Instance.new("Part",char)
+daqueen.Name = "asd"
+daqueen.CanCollide = false
+local mesh = Instance.new("SpecialMesh",daqueen)
+mesh.Scale = Vector3.new(0.1,0.1,0.1)
+mesh.MeshId = "rbxassetid://1300136843"
+local text = Instance.new("Decal",daqueen)
+text.Name = "asd"
+text.Texture = "rbxassetid://1300137893"
+local knowdawey = Instance.new("Weld",char)
+knowdawey.Part0 = char.HumanoidRootPart
+knowdawey.Part1 = daqueen
+local eye1 = Instance.new("Part")
+eye1.CanCollide = false
+eye1.Parent = char
+local mesh1 = Instance.new("SpecialMesh",eye1)
+mesh1.MeshId = "rbxassetid://1300138314"
+mesh1.Scale = Vector3.new(0.1,0.1,0.2)----Get someone with a pc to fix
+local eyetext = Instance.new("Decal",eye1)
+eyetext.Texture = "rbxassetid://1300129774"
+local eye1w = Instance.new("Weld",char)
+eye1w.Part0 = char.HumanoidRootPart
+eye1w.Part1 = eye1
+eye1w.C1 = CFrame.new(0,-1.3,0.7)
+mouse.KeyDown:connect(function(key)
+	if key == "e" and do_u_no_de_wae.Playing == false and spitt.Playing == false and Speach.Playing == false then
+		do_u_no_de_wae.Playing = true 
+	end
+end)
+mouse.KeyDown:connect(function(key)
+		if key == "t" and do_u_no_de_wae.Playing == false and spitt.Playing == false and Speach.Playing == false then
+		Speach.Playing = true 
+	end
+end)
+mouse.KeyDown:connect(function(key)
+	if key == "r" and do_u_no_de_wae.Playing == false and spitt.Playing == false and Speach.Playing == false then
+		spitt.Playing = true 
+	end
+end)
+mouse.KeyDown:connect(function(key)
+	if key == "p" and BruddaCount < 2 then
+		BruddaCount = BruddaCount + 1
+		local color = math.random(1,2)
+		
+		char.Archivable = true
+		local Clone = char:Clone()
+		for i,v in pairs(Clone:GetChildren()) do
+			if v:IsA("Sound") then
+				v:Destroy()
+			end
+		end
+		Clone.Parent = char
+		if color == 1 then
+			Clone.asd.asd.Texture = "rbxassetid://1323248452"
+		end
+		if color == 2 then
+			Clone.asd.asd.Texture = "rbxassetid://1300137893"
+		end
+		
+		while wait() do
+			Clone.Humanoid:MoveTo(char.HumanoidRootPart.Position+Vector3.new(math.random(2,5),0,math.random(2,5) ))
+		end
+	end
+end)

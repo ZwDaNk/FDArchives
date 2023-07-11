@@ -1,0 +1,2348 @@
+if game.CoreGui:FindFirstChild('YourMom') ~= nil then
+	game.CoreGui.YourMom:Destroy()
+end	
+
+wait(0.1)
+
+game:GetObjects('http://www.roblox.com/asset/?id=288994927')[1].Parent = game.CoreGui
+
+game.CoreGui.YourMom.GUI.Visible = false
+
+wait(0.1)
+
+Player = game.Players.LocalPlayer
+Mouse = Player:GetMouse()
+
+local YourMom = game.CoreGui.YourMom
+local Open = YourMom.Open
+
+Open:TweenPosition(UDim2.new(0, 0, 0, 250), 'Out', 'Quad', 0.5, true)
+
+local GUI = YourMom.GUI
+local Exit = GUI.Exit
+local Tabs = GUI.Tabs
+local InTabs = GUI.InTabs
+
+local Selected = GUI.Selected
+
+local Server = Tabs.Server
+local LocalPlayer = Tabs.LocalPlayer
+local Toys = Tabs.Toys
+local Players = Tabs.Players
+local Settings = Tabs.Settings
+
+local ServerPage = InTabs.Server
+local ServerPage1 = InTabs.Server.Page1
+local ServerPage2 = InTabs.Server.Page2
+
+local LocalPlayerPage = InTabs.LocalPlayer
+local LocalPlayerPage1 = InTabs.LocalPlayer.Page1
+local LocalPlayerPage2 = InTabs.LocalPlayer.Page2
+
+local ToysPage1 = InTabs.Toys
+
+local PlayersPage = InTabs.Players
+
+local HatsPage = InTabs.Hats
+local InHatsPage = HatsPage.InHatsPage
+
+local SettingsPage = InTabs.Settings
+
+--Page Toggles--
+
+local LocalPlayerPageToggle = InTabs.LocalPlayer.PageToggle
+
+local LocalPlayerPage1Toggle = InTabs.LocalPlayer.PageToggle.Page1
+local LocalPlayerPage2Toggle = InTabs.LocalPlayer.PageToggle.Page2
+
+
+local ServerPageToggle = InTabs.Server.PageToggle
+
+local ServerPage1Toggle = InTabs.Server.PageToggle.Page1
+local ServerPage2Toggle = InTabs.Server.PageToggle.Page2
+
+GUI.Position = UDim2.new(0, 550, 0, 1000)
+
+-- DATA --
+
+local DATA = game:GetObjects('http://www.roblox.com/asset/?id=291560220')[1]
+DATA.Parent = game.ContextActionService
+
+local GunGui = DATA.Guis:Clone()
+GunGui.Parent = game.Lighting
+
+--Outlines--
+
+if game.Lighting.Outlines == true then
+	
+	SettingsPage.Set.OutlinesTrue.Visible = true
+	
+	SettingsPage.Set.OutlinesFalse.Visible = false
+	
+end
+
+if game.Lighting.Outlines == false then
+	
+	SettingsPage.Set.OutlinesTrue.Visible = false
+	
+	SettingsPage.Set.OutlinesFalse.Visible = true
+	
+end
+
+
+
+
+
+
+
+
+
+
+
+--Visble Settings--
+
+Open.MouseButton1Down:connect(function ()
+	
+	Open:TweenPosition(UDim2.new(0, -50, 0, 250), 'Out', 'Quad', 0.5, true)
+	
+	GUI:TweenPosition(UDim2.new(0, 550, 0, 250), 'Out', 'Quad', 0.5, true)
+	
+	GUI.Visible = true
+	
+	Open.Active = false
+	
+	GUI.Active = true
+	
+end)
+
+Exit.MouseButton1Down:connect(function ()
+	
+	Open.Visible = true
+	
+	GUI:TweenPosition(UDim2.new(0, 550, 0, 1000), 'Out', 'Quad', 0.5, true)
+	
+	Open:TweenPosition(UDim2.new(0, 0, 0, 250), 'Out', 'Quad', 0.5, true)
+	
+	Open.Active = true
+	
+	GUI.Active = false
+	
+end)
+
+Tabs.Server.MouseButton1Down:connect(function ()
+	
+	ServerPage.Visible = true
+	
+	ServerPage1.Visible = true
+	
+	LocalPlayerPage.Visible = false
+	
+	PlayersPage.Visible = false
+	
+	ToysPage1.Visible = false
+	
+	HatsPage.Visible = false
+	
+	ServerPageToggle.Visible = true
+	
+	ServerPage2.Visible = false
+	
+	SettingsPage.Visible = false
+	
+	Selected:TweenPosition(UDim2.new(0, 105, 0, 45), 'Out', 'Quad', 0.2, true)
+	
+end)
+
+Tabs.LocalPlayer.MouseButton1Down:connect(function ()
+	
+	ServerPage1.Visible = false
+	
+	LocalPlayerPage.Visible = true
+	
+	LocalPlayerPage1.Visible = true
+	
+	LocalPlayerPage2.Visible = false
+	
+	PlayersPage.Visible = false
+	
+	ToysPage1.Visible = false
+	
+	HatsPage.Visible = true
+	
+	HatsPage.Hats.Visible = true
+	
+	HatsPage.GoBack.Visible = false
+	
+	InHatsPage.Visible = false
+	
+	ServerPageToggle.Visible = false
+	
+	ServerPage2.Visible = false
+	
+	SettingsPage.Visible = false
+	
+	Selected:TweenPosition(UDim2.new(0, 105, 0, 75), 'Out', 'Quad', 0.2, true)
+	
+end)
+
+Tabs.Players.MouseButton1Down:connect(function ()
+	
+	ServerPage1.Visible = false
+	
+	LocalPlayerPage.Visible = false
+	
+	PlayersPage.Visible = true
+	
+	ToysPage1.Visible = false
+	
+	HatsPage.Visible = false
+	
+	ServerPageToggle.Visible = false
+	
+	ServerPage2.Visible = false
+	
+	SettingsPage.Visible = false
+	
+	Selected:TweenPosition(UDim2.new(0, 105, 0, 135), 'Out', 'Quad', 0.2, true)
+	
+end)
+
+Tabs.Toys.MouseButton1Down:connect(function ()
+	
+	ServerPage1.Visible = false
+	
+	LocalPlayerPage.Visible = false
+	
+	PlayersPage.Visible = false
+	
+	ToysPage1.Visible = true
+	
+	HatsPage.Visible = false
+	
+	ServerPageToggle.Visible = false
+	
+	ServerPage2.Visible = false
+	
+	SettingsPage.Visible = false
+	
+	Selected:TweenPosition(UDim2.new(0, 105, 0, 105), 'Out', 'Quad', 0.2, true)
+	
+end)
+
+HatsPage.Hats.MouseButton1Down:connect(function ()
+	
+	ServerPage1.Visible = false
+	
+	LocalPlayerPage.Visible = false
+	
+	PlayersPage.Visible = false
+	
+	ToysPage1.Visible = false
+	
+	HatsPage.Visible = true
+	
+	HatsPage.Hats.Visible = false
+	
+	HatsPage.GoBack.Visible = true
+	
+	InHatsPage.Visible = true
+	
+	ServerPageToggle.Visible = false
+	
+	ServerPage2.Visible = false
+	
+end)
+
+HatsPage.GoBack.MouseButton1Down:connect(function ()
+	
+	ServerPage1.Visible = false
+	
+	LocalPlayerPage.Visible = true
+	
+	LocalPlayerPage1.Visible = true
+	
+	LocalPlayerPage2.Visible = false
+	
+	PlayersPage.Visible = false
+	
+	ToysPage1.Visible = false
+	
+	HatsPage.Visible = true
+	
+	HatsPage.Hats.Visible = true
+	
+	HatsPage.GoBack.Visible = false
+	
+	InHatsPage.Visible = false
+	
+	ServerPageToggle.Visible = false
+	
+	ServerPage2.Visible = false
+	
+end)
+
+ServerPage1Toggle.MouseButton1Down:connect(function ()
+	
+	ServerPage1.Visible = true
+	
+	ServerPage2.Visible = false
+	
+end)
+
+ServerPage2Toggle.MouseButton1Down:connect(function ()
+	
+	ServerPage1.Visible = false
+	
+	ServerPage2.Visible = true
+	
+end)
+
+LocalPlayerPage1Toggle.MouseButton1Down:connect(function ()
+	
+	LocalPlayerPage1.Visible = true
+	
+	LocalPlayerPage2.Visible = false
+	
+end)
+
+LocalPlayerPage2Toggle.MouseButton1Down:connect(function ()
+	
+	LocalPlayerPage1.Visible = false
+	
+	LocalPlayerPage2.Visible = true
+	
+end)
+
+Settings.MouseButton1Down:connect(function ()
+	
+	ServerPage1.Visible = false
+	
+	LocalPlayerPage.Visible = false
+	
+	PlayersPage.Visible = false
+	
+	ToysPage1.Visible = false
+	
+	HatsPage.Visible = false
+	
+	HatsPage.Hats.Visible = false
+	
+	HatsPage.GoBack.Visible = false
+	
+	InHatsPage.Visible = false
+	
+	ServerPageToggle.Visible = false
+	
+	ServerPage2.Visible = false
+	
+	SettingsPage.Visible = true
+	
+	Selected:TweenPosition(UDim2.new(0, 105, 0, 165), 'Out', 'Quad', 0.2, true)
+	
+end)
+
+
+
+
+
+
+
+
+
+
+--Server Page 1--
+
+ServerPage1.KillAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character:BreakJoints()
+    end
+	
+end)
+
+ServerPage1.FireAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		Instance.new('Fire', v.Character.Torso)
+	end
+	
+end)
+
+ServerPage1.SmokeAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		Instance.new('Smoke', v.Character.Torso)
+	end
+		
+end)
+
+ServerPage1.KickAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v:Destroy()
+	end
+	
+end)
+
+ServerPage1.SparklesAll.MouseButton1Down:connect(function ()
+	for _,v in pairs(game.Players:GetChildren()) do
+		Instance.new('Sparkles', v.Character.Torso)
+	end
+end)
+
+ServerPage1.FlingAll.MouseButton1Down:connect(function ()
+	for _,v in pairs(game.Players:GetChildren()) do
+		local Force1 local Force2 repeat Force1 = math.random(-92999,92999)
+		until math.abs(Force1) >= 5555
+		repeat Force2 = math.random(-92999,92999)
+		until math.abs(Force2) >= 5555
+		v.Character.Humanoid.PlatformStand = true v.Character.Torso.Velocity = Vector3.new(0,0,0) 
+		
+		local Fling = Instance.new('BodyForce', v.Character.Torso)
+		Fling.Name = 'Flung'
+		Fling.force = Vector3.new(Force1*4,9999*5,Force2*4)
+	end
+end)
+
+ServerPage1.Dark.MouseButton1Down:connect(function ()
+	
+	game.Lighting.TimeOfDay = 24
+	
+    game.Lighting.Ambient = Color3.new(0,0,0)
+
+    game.Lighting.Brightness = -1000
+
+    game.Lighting.GlobalShadows = false
+	
+end)
+
+ServerPage1.Bright.MouseButton1Down:connect(function ()
+	
+	game.Lighting.TimeOfDay = 10
+	
+    game.Lighting.Ambient = Color3.new(255,255,255)
+
+    game.Lighting.Brightness = 1000
+
+    game.Lighting.GlobalShadows = true
+	
+end)
+
+ServerPage1.BoxAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		Instance.new('SelectionBox', v.Character).Adornee = v.Character
+	end
+	
+end)
+
+ServerPage1.BToolsAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+			Instance.new('HopperBin', v.Backpack).BinType = 2
+			Instance.new('HopperBin', v.Backpack).BinType = 3
+			Instance.new('HopperBin', v.Backpack).BinType = 4
+	end
+	
+end)
+
+ServerPage1.FFAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		Instance.new('ForceField', v.Character)
+	end
+	
+end)
+
+ServerPage1.GodAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Humanoid.MaxHealth = math.huge
+	end
+	
+end)
+
+ServerPage1.ExplodeAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		Instance.new('Explosion', v.Character.Torso).Position = v.Character.Torso.Position
+	end
+	
+end)
+
+ServerPage1.InvisAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Head.Transparency = 1
+		v.Character.Torso.Transparency = 1
+		v.Character['Left Arm'].Transparency = 1
+		v.Character['Right Arm'].Transparency = 1
+		v.Character['Left Leg'].Transparency = 1
+		v.Character['Right Leg'].Transparency = 1
+		v.Character.Head.face.Transparency = 1
+	end
+	
+end)
+
+ServerPage1.VisAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Head.Transparency = 0
+		v.Character.Torso.Transparency = 0
+		v.Character['Left Arm'].Transparency = 0
+		v.Character['Right Arm'].Transparency = 0
+		v.Character['Left Leg'].Transparency = 0
+		v.Character['Right Leg'].Transparency = 0
+		v.Character.Head.face.Transparency = 0
+	end
+	
+end)
+
+ServerPage1.TPAllMe.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs (game.Players:GetChildren()) do
+		if Player.Character:FindFirstChild('HumanoidRootPart') and v.Character:FindFirstChild('HumanoidRootPart') then
+			v.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+		end
+	end
+	
+end)
+
+ServerPage1.PlusWSAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Humanoid.WalkSpeed = v.Character.Humanoid.WalkSpeed + 5
+	end
+	
+end)
+
+ServerPage1.SubtractWSAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Humanoid.WalkSpeed = v.Character.Humanoid.WalkSpeed - 5
+	end
+	
+end)
+
+ServerPage1.Noob.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.CharacterAppearance = 'http://www.roblox.com/Asset/CharacterFetch.ashx?userId=0'
+		if v.Character:FindFirstChild('Head') then
+			v.Character.Head:Destroy()
+		end
+	end
+	
+end)
+
+ServerPage1.Guest.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.CharacterAppearance = 'http://www.roblox.com/Asset/CharacterFetch.ashx?userId=1'
+		if v.Character:FindFirstChild('Head') then
+			v.Character.Head:Destroy()
+		end
+	end
+	
+end)
+
+ServerPage1.Day.MouseButton1Down:connect(function ()
+	
+	game.Lighting.TimeOfDay = 14
+	
+end)
+
+ServerPage1.Night.MouseButton1Down:connect(function ()
+	
+	game.Lighting.TimeOfDay = 24
+	
+end)
+
+ServerPage1.GlowParts.MouseButton1Down:connect(function ()
+	
+	Unlock = function(Instance)
+		for i,v in pairs(Instance:GetChildren()) do
+			if v:IsA('BasePart') then
+				v.Material = 'Neon'
+			end
+			Unlock(v)
+		end
+	end
+	Unlock(workspace)
+	
+end)
+
+ServerPage1.GhostParts.MouseButton1Down:connect(function ()
+	
+	Unlock = function(Instance)
+		for i,v in pairs(Instance:GetChildren()) do
+			if v:IsA('BasePart') then
+				v.Transparency = 0.5
+			end
+			Unlock(v)
+		end
+	end
+	Unlock(workspace)
+	
+end)
+
+ServerPage1.FixLighting.MouseButton1Down:connect(function ()
+	
+	game.Lighting.Ambient = Color3.new(0.5,0.5,0.5)
+	
+	game.Lighting.Brightness = 1
+	
+	game.Lighting.GlobalShadows = true
+	
+	game.Lighting.Outlines = false
+	
+	game.Lighting.TimeOfDay = 14
+	
+	game.Lighting.FogEnd = 100000
+	
+end)
+
+ServerPage1.UnAnchor.MouseButton1Down:connect(function ()
+	
+	local function UnAnchor(Instance)
+		for i,v in pairs(Instance:GetChildren()) do
+			if v:IsA('BasePart') then
+				v.Anchored = false
+			end
+			UnAnchor(v)
+		end
+	end
+	UnAnchor(workspace)
+	
+end)
+
+ServerPage1.UnLock.MouseButton1Down:connect(function ()
+	
+	local function UnLock(Instance)
+		for i,v in pairs(Instance:GetChildren()) do
+			if v:IsA('BasePart') then
+				v.Locked = false
+			end
+			UnLock(v)
+		end
+	end
+	UnLock(workspace)
+	
+end)
+
+ServerPage1.BombAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		local Bomb = Instance.new('Part')
+		Bomb.Parent = game.Workspace
+		Bomb.Size = Vector3.new(2,2,2)
+		Bomb.Material = 'Neon'
+		Bomb.BrickColor = BrickColor.new('Really black')
+		Bomb.Position = v.Character.Head.Position
+		Bomb.Shape = 'Ball'
+		Bomb.TopSurface = 'Smooth'
+		Bomb.BottomSurface = 'Smooth'
+		Bomb.Locked = true
+		wait(3)
+		local Explosion = Instance.new('Explosion')
+		Explosion.Parent = game.Workspace
+		Explosion.Position = Bomb.Position
+		Explosion.BlastRadius = 10
+	    Explosion.BlastPressure = 1000000
+	    Bomb:Destroy()
+	end
+	
+end)
+
+ServerPage1.PunishAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Parent = game.Debris
+	end
+	
+end)
+
+ServerPage1.UnPunishAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Debris:GetChildren()) do
+		if v:IsA('Model') then
+			v.Parent = game.Workspace
+			v:MakeJoints()
+		end
+		
+	end
+	
+end)
+
+ServerPage1.JumpAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Humanoid.Jump = true
+	end
+	
+end)
+
+ServerPage1.SitAll.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Humanoid.Sit = true
+	end
+	
+end)
+
+--Server Page 2--
+
+ServerPage2.Reverse.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Humanoid.WalkSpeed = -16
+	end
+	
+end)
+
+ServerPage2.Normal.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(game.Players:GetChildren()) do
+		v.Character.Humanoid.WalkSpeed = 16
+	end
+	
+end)
+
+ServerPage2.Map.MouseButton1Down:connect(function ()
+	
+    pcall(function()
+	for i,v in pairs(game.Workspace:GetChildren()) do
+		if v.Name~='Camera' and v.Name~='Terrain' then
+			v:Destroy()
+		end
+	end
+	
+	workspace.Terrain:Clear()
+	
+	for i,v in pairs(game.Players:GetChildren()) do
+		local Plr = v
+		local Part = Instance.new('Model', game.Workspace)
+		Instance.new('Part', Part).Name = 'Torso'
+		Instance.new('Part', Part).Name = 'Head'
+		Instance.new('Humanoid', Part).Name = 'Humanoid'
+		Plr.Character = Part
+	end
+	
+	    local Load = game:GetObjects('http://www.roblox.com/asset/?id=296400126')[1]
+	    Load.Parent = game.Workspace
+	    Load:MakeJoints()
+	
+	end)
+	
+end)
+
+
+
+
+
+
+
+
+
+
+
+--LocalPlayer Page 1--
+
+local Clip = true
+
+LocalPlayerPage1.NoClip.MouseButton1Down:connect(function (NC)
+	
+	Clip = false
+	local Name = Player.Name
+	game:GetService('Players').LocalPlayer.PlayerGui.ChildAdded:connect(function ()
+		delay(0, function()
+			if NC.Name == 'NC' then
+				NC:Destroy()
+			end
+		end)
+	end)
+	game:GetService('RunService').Stepped:connect(function ()
+		game.Workspace[Name].Torso.CanCollide = Clip
+		game.Workspace[Name].Head.CanCollide = Clip
+	end)
+	game.Workspace[Name].Torso.Changed:connect(function ()
+		game.Workspace[Name].Torso.CanCollide = Clip
+		game.Workspace[Name].Head.CanCollide = Clip
+	end)
+	
+end)
+
+LocalPlayerPage1.Reset.MouseButton1Down:connect(function ()
+	
+	Player.Character:BreakJoints()
+	
+end)
+
+LocalPlayerPage1.Fire.MouseButton1Down:connect(function ()
+	
+	Instance.new('Fire', Player.Character.Torso)
+	
+end)
+
+LocalPlayerPage1.Smoke.MouseButton1Down:connect(function ()
+	
+	Instance.new('Smoke', Player.Character.Torso)
+	
+end)
+
+LocalPlayerPage1.Sparkles.MouseButton1Down:connect(function ()
+	
+	Instance.new('Sparkles', Player.Character.Torso)
+	
+end)
+
+LocalPlayerPage1.Box.MouseButton1Down:connect(function ()
+	
+	Instance.new('SelectionBox', Player.Character).Adornee = Player.Character
+	
+end)
+
+LocalPlayerPage1.BTools.MouseButton1Down:connect(function ()
+	
+	Instance.new('HopperBin', Player.Backpack).BinType = 2
+	Instance.new('HopperBin', Player.Backpack).BinType = 3
+	Instance.new('HopperBin', Player.Backpack).BinType = 4
+	
+end)
+
+LocalPlayerPage1.FF.MouseButton1Down:connect(function ()
+	
+	Instance.new('ForceField', Player.Character)
+	
+end)
+
+LocalPlayerPage1.God.MouseButton1Down:connect(function ()
+	
+	Player.Character.Humanoid.MaxHealth = math.huge
+	
+end)
+
+LocalPlayerPage1.Explode.MouseButton1Down:connect(function ()
+	
+	Instance.new('Explosion', Player.Character.Torso).Position = Player.Character.Torso.Position
+	
+end)
+
+LocalPlayerPage1.Invis.MouseButton1Down:connect(function ()
+	
+	Player.Character.Head.Transparency = 1
+	Player.Character.Torso.Transparency = 1
+	Player.Character['Left Arm'].Transparency = 1
+	Player.Character['Right Arm'].Transparency = 1
+	Player.Character['Left Leg'].Transparency = 1
+    Player.Character['Right Leg'].Transparency = 1
+	Player.Character.Head.face.Transparency = 1
+	
+end)
+
+LocalPlayerPage1.Vis.MouseButton1Down:connect(function ()
+	
+	Player.Character.Head.Transparency = 0
+	Player.Character.Torso.Transparency = 0
+	Player.Character['Left Arm'].Transparency = 0
+	Player.Character['Right Arm'].Transparency = 0
+	Player.Character['Left Leg'].Transparency = 0
+    Player.Character['Right Leg'].Transparency = 0
+	Player.Character.Head.face.Transparency = 0
+	
+end)
+
+LocalPlayerPage1.PlusWS.MouseButton1Down:connect(function ()
+	
+	Player.Character.Humanoid.WalkSpeed = Player.Character.Humanoid.WalkSpeed + 5
+	
+end)
+
+LocalPlayerPage1.SubractWS.MouseButton1Down:connect(function ()
+	
+	Player.Character.Humanoid.WalkSpeed = Player.Character.Humanoid.WalkSpeed - 5
+	
+end)
+
+LocalPlayerPage1.Noob.MouseButton1Down:connect(function ()
+	
+	Player.CharacterAppearance = 'http://www.roblox.com/Asset/CharacterFetch.ashx?userId=0'
+	if Player.Character:FindFirstChild('Head') then
+		Player.Character.Head:Destroy()
+	end
+	
+end)
+
+LocalPlayerPage1.Guest.MouseButton1Down:connect(function ()
+	
+	Player.CharacterAppearance = 'http://www.roblox.com/Asset/CharacterFetch.ashx?userId=1'
+	if Player.Character:FindFirstChild('Head') then
+		Player.Character.Head:Destroy()
+	end
+	
+end)
+
+LocalPlayerPage1.Clip.MouseButton1Down:connect(function ()
+	
+	Clip = true
+	
+end)
+
+LocalPlayerPage1.Ghost.MouseButton1Down:connect(function ()
+	
+	Player.Character.Head.Transparency = 0.5
+	Player.Character.Torso.Transparency = 0.5
+	Player.Character['Left Arm'].Transparency = 0.5
+	Player.Character['Right Arm'].Transparency = 0.5
+	Player.Character['Left Leg'].Transparency = 0.5
+    Player.Character['Right Leg'].Transparency = 0.5
+	Player.Character.Head.face.Transparency = 0.5
+	
+end)
+
+LocalPlayerPage1.Bomb.MouseButton1Down:connect(function ()
+	
+	local Bomb = Instance.new('Part')
+	Bomb.Parent = game.Workspace
+	Bomb.Size = Vector3.new(2,2,2)
+	Bomb.Material = 'Neon'
+	Bomb.BrickColor = BrickColor.new('Really black')
+	Bomb.Position = Player.Character.Head.Position
+	Bomb.Shape = 'Ball'
+	Bomb.TopSurface = 'Smooth'
+	Bomb.BottomSurface = 'Smooth'
+	Bomb.Locked = true
+	wait(3)
+	local Explosion = Instance.new('Explosion')
+	Explosion.Parent = game.Workspace
+	Explosion.Position = Bomb.Position
+	Explosion.BlastRadius = 10
+	Explosion.BlastPressure = 1000000
+	Bomb:Destroy()
+	
+end)
+
+LocalPlayerPage1.Sit.MouseButton1Down:connect(function ()
+	
+	Player.Character.Humanoid.Sit = true
+	
+end)
+
+LocalPlayerPage1.Sphere.MouseButton1Down:connect(function ()
+	
+	local Sphere = Instance.new('SelectionSphere', Player.Character)
+	Sphere.Adornee = Sphere.Parent
+	
+end)
+
+LocalPlayerPage1.PlayerSphere.MouseButton1Down:connect(function ()
+	
+	local Head = Player.Character.Head
+	local Torso = Player.Character.Torso
+	local LLeg = Player.Character['Left Leg']
+	local RLeg = Player.Character['Right Leg']
+	local LArm = Player.Character['Left Arm']
+	local RArm = Player.Character['Right Arm']
+	
+	Head.Transparency = 1
+	Torso.Transparency = 1
+	LLeg.Transparency = 1
+	RLeg.Transparency = 1
+	LArm.Transparency = 1
+	RArm.Transparency = 1
+	
+	local H = Instance.new('SelectionSphere', Head)
+	H.Adornee = H.Parent
+	
+	local T = Instance.new('SelectionSphere', Torso)
+	T.Adornee = T.Parent
+	
+	local LL = Instance.new('SelectionSphere', LLeg)
+	LL.Adornee = LL.Parent
+	
+	local RL = Instance.new('SelectionSphere', RLeg)
+	RL.Adornee = RL.Parent
+	
+	local LA = Instance.new('SelectionSphere', LArm)
+	LA.Adornee = LA.Parent
+	
+	local RA = Instance.new('SelectionSphere', RArm)
+	RA.Adornee = RA.Parent
+	
+end)
+
+LocalPlayerPage1.BoxHead.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(Player.Character:GetChildren()) do
+		if v:IsA('Hat') then
+			v:Destroy()
+		end
+	end
+	
+	Player.Character.Head.Size = Vector3.new(2,2,2)
+	Player.Character.Head.Transparency = 1
+	
+	Player.Character.Head.face.Transparency = 1
+	
+    local SB = Instance.new('SelectionBox', Player.Character.Head)
+    SB.Adornee = SB.Parent
+	
+end)
+
+LocalPlayerPage1.BigHead.MouseButton1Down:connect(function ()
+	
+	Player.Character.Head.Mesh.Scale = Vector3.new(3.75,3.75,3.75)
+	
+	Player.Character.Head.Mesh.Offset = Vector3.new(0,1.25,0)
+	
+end)
+
+LocalPlayerPage1.SmallHead.MouseButton1Down:connect(function ()
+	
+	Player.Character.Head.Mesh.Scale = Vector3.new(.75,.75,.75)
+	
+	Player.Character.Head.Mesh.Offset = Vector3.new(0,-.2,0)
+	
+end)
+
+LocalPlayerPage1.FireHead.MouseButton1Down:connect(function ()
+	
+	Player.Character.Head.Transparency = 1
+	Player.Character.Head.face.Transparency = 1
+	
+	Instance.new('Fire', Player.Character.Head)
+	
+end)
+
+LocalPlayerPage1.FixHead.MouseButton1Down:connect(function ()
+	
+	Player.Character.Head.Mesh.Scale = Vector3.new(1.25,1.25,1.25)
+	
+	Player.Character.Head.Mesh.Offset = Vector3.new(0,0,0)
+	
+	Player.Character.Head.Transparency = 0
+	
+	Player.Character.Head.face.Transparency = 0
+	
+	Player.Character.Head.Size = Vector3.new(2,1,1)
+	
+end)
+
+LocalPlayerPage1.Purge.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(Player.Character:GetChildren()) do
+		if v:IsA('Hat') then
+			v:Destroy()
+		end
+	end
+	
+	if Player.Character:FindFirstChild('Shirt') ~= nil then
+		Player.Character.Shirt:Destroy()
+	end
+	
+	if Player.Character:FindFirstChild('Pants') ~= nil then
+		Player.Character.Pants:Destroy()
+	end
+	
+	if Player.Character:FindFirstChild('Shirt Graphic') ~= nil then
+		Player.Character['Shirt Graphic'].Graphic = ''
+	end
+	
+	local Shirt = Instance.new('Shirt', Player.Character)
+	Shirt.ShirtTemplate = 'http://www.roblox.com/asset/?id=291066914'
+	Shirt.Name = 'Shirt'
+	
+	local Pants = Instance.new('Pants', Player.Character)
+	Pants.PantsTemplate = 'http://www.roblox.com/asset/?id=291067029'
+	Pants.Name = 'Pants'
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=32278814')[1].Parent = Player.Character
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=20418416')[1].Parent = Player.Character
+	
+	local Shotgun = game:GetService('InsertService'):LoadAsset(94233344) --Shotgun
+	for i,v in pairs(game.Players.LocalPlayer:GetChildren()) do
+		for _,j in pairs(Shotgun:GetChildren()) do
+			if j:IsA('Tool') then
+				j.Parent = Player.Backpack
+			end
+		end
+	end
+	
+	local Knife = game:GetService('InsertService'):LoadAsset(170897263) --Knife
+	for i,v in pairs(game.Players.LocalPlayer:GetChildren()) do
+		for _,j in pairs(Knife:GetChildren()) do
+			if j:IsA('Tool') then
+				j.Parent = Player.Backpack
+			end
+		end
+	end
+	
+	local TimmyGun = game:GetService('InsertService'):LoadAsset(116693764) --Timmy Gun
+	for i,v in pairs(game.Players.LocalPlayer:GetChildren()) do
+		for _,j in pairs(TimmyGun:GetChildren()) do
+			if j:IsA('Tool') then
+				j.Parent = Player.Backpack
+			end
+		end
+	end
+	
+	local Missle = game:GetService('InsertService'):LoadAsset(67747912) --Missle Launcher
+	for i,v in pairs(game.Players.LocalPlayer:GetChildren()) do
+		for _,j in pairs(Missle:GetChildren()) do
+			if j:IsA('Tool') then
+				j.Parent = Player.Backpack
+			end
+		end
+	end
+	
+end)
+
+LocalPlayerPage1.WP.MouseButton1Down:connect(function ()
+	
+	for a, mod in pairs(Player.Character:GetChildren()) do
+		
+		if mod:FindFirstChild('NameTagger') then
+			
+			Player.Character.Head.Transparency = 0 mod:Destroy()
+			
+		end
+		
+	end
+	
+	local Model = Instance.new('Model', Player.Character)
+	Model.Name = 'Your Mom'
+	
+	local Clone = Player.Character.Head:Clone()
+	Clone.Parent = Model
+	Clone.BrickColor = BrickColor.new('Cool yellow')
+	
+	local Humanoid = Instance.new('Humanoid', Model)
+	Humanoid.Name = 'NameTagger'
+	Humanoid.MaxHealth = 100
+	Humanoid.Health = 100
+	
+	local Weld = Instance.new('Weld', Clone)
+	Weld.Part0 = Clone
+	Weld.Part1 = Player.Character.Head
+	
+	Player.Character.Head.Transparency = 1
+	
+	if Player.Character:FindFirstChild('Shirt') ~= nil then
+		
+		Player.Character.Shirt:Destroy()
+		
+	end
+	
+	if Player.Character:FindFirstChild('Pants') ~= nil then
+		
+		Player.Character.Pants:Destroy()
+		
+	end
+	
+	if Player.Character:FindFirstChild('Shirt Graphic') ~= nil then
+		
+		Player.Character['Shirt Graphic'].Graphic = ''
+		
+	end
+	
+	Player.Character['Body Colors'].HeadColor = BrickColor.new('Cool yellow')
+	
+	Player.Character['Body Colors'].LeftArmColor = BrickColor.new('Cool yellow')
+	
+	Player.Character['Body Colors'].LeftLegColor = BrickColor.new('Medium blue')
+	
+	Player.Character['Body Colors'].RightArmColor = BrickColor.new('Cool yellow')
+	
+	Player.Character['Body Colors'].RightLegColor = BrickColor.new('Medium blue')
+	
+	Player.Character['Body Colors'].TorsoColor = BrickColor.new('Bright blue')
+	
+	for _,v in pairs(Player.Character:GetChildren()) do
+		if v:IsA('Hat') then
+			v:Destroy()
+		end
+	end
+	
+end)
+
+LocalPlayerPage1.CylinderPlayer.MouseButton1Down:connect(function ()
+	
+	Instance.new('CylinderMesh', Player.Character.Head)
+	
+	Instance.new('CylinderMesh', Player.Character.Torso)
+	
+	Instance.new('CylinderMesh', Player.Character['Left Arm'])
+	
+	Instance.new('CylinderMesh', Player.Character['Right Arm'])
+	
+	Instance.new('CylinderMesh', Player.Character['Left Leg'])
+	
+	Instance.new('CylinderMesh', Player.Character['Right Leg'])
+	
+end)
+
+LocalPlayerPage1.FatPlayer.MouseButton1Down:connect(function ()
+	
+	Instance.new('SpecialMesh', Player.Character.Head)
+	
+	Instance.new('SpecialMesh', Player.Character.Torso).Scale = Vector3.new(1,1,2)
+	
+	Instance.new('SpecialMesh', Player.Character['Left Arm'])
+	
+	Instance.new('SpecialMesh', Player.Character['Right Arm'])
+	
+	Instance.new('SpecialMesh', Player.Character['Left Leg'])
+	
+	Instance.new('SpecialMesh', Player.Character['Right Leg'])
+	
+end)
+
+LocalPlayerPage1.PaperPlayer.MouseButton1Down:connect(function ()
+	
+	Instance.new('BlockMesh', Player.Character.Torso).Scale = Vector3.new(1,1,0)
+	
+	Instance.new('BlockMesh', Player.Character['Left Arm']).Scale = Vector3.new(1,1,0)
+	
+	Instance.new('BlockMesh', Player.Character['Right Arm']).Scale = Vector3.new(1,1,0)
+	
+	Instance.new('BlockMesh', Player.Character['Left Leg']).Scale = Vector3.new(1,1,0)
+	
+	Instance.new('BlockMesh', Player.Character['Right Leg']).Scale = Vector3.new(1,1,0)
+	
+end)
+
+--LocalPlayer Page 2--
+
+LocalPlayerPage2.Midget.MouseButton1Down:connect(function ()
+	
+	function scale(chr,scl)
+	
+		for _,v in pairs(Player.Character:GetChildren()) do
+			if v:IsA('Hat') then
+				v:Clone()
+				v.Parent = game.Lighting
+			end
+		end
+			
+	    local Head = chr['Head']
+	    local Torso = chr['Torso']
+	    local LA = chr['Left Arm']
+	    local RA = chr['Right Arm']
+	    local LL = chr['Left Leg']
+	    local RL = chr['Right Leg']
+	    local HRP = chr['HumanoidRootPart']
+	
+	    wait(0.1)
+	   
+	    Head.formFactor = 3
+	    Torso.formFactor = 3
+	    LA.formFactor = 3
+	    RA.formFactor = 3
+	    LL.formFactor = 3
+	    RL.formFactor = 3
+	    HRP.formFactor = 3
+	    
+	    Head.Size = Vector3.new(scl * 2, scl, scl)
+	    Torso.Size = Vector3.new(scl * 2, scl * 2, scl)
+	    LA.Size = Vector3.new(scl, scl * 2, scl)
+	    RA.Size = Vector3.new(scl, scl * 2, scl)
+	    LL.Size = Vector3.new(scl, scl * 2, scl)
+	    RL.Size = Vector3.new(scl, scl * 2, scl)
+	    HRP.Size = Vector3.new(scl * 2, scl * 2, scl)
+	    
+	    local Motor1 = Instance.new('Motor6D', Torso)
+	    Motor1.Part0 = Torso
+	    Motor1.Part1 = Head
+	    Motor1.C0 = CFrame.new(0, 1 * scl, 0) * CFrame.Angles(-1.6, 0, 3.1)
+	    Motor1.C1 = CFrame.new(0, -0.5 * scl, 0) * CFrame.Angles(-1.6, 0, 3.1)
+	    Motor1.Name = 'Neck'
+			    
+	    local Motor2 = Instance.new('Motor6D', Torso)
+	    Motor2.Part0 = Torso
+	    Motor2.Part1 = LA
+	    Motor2.C0 = CFrame.new(-1 * scl, 0.5 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor2.C1 = CFrame.new(0.5 * scl, 0.5 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor2.Name = 'Left Shoulder'
+	    
+	    local Motor3 = Instance.new('Motor6D', Torso)
+	    Motor3.Part0 = Torso
+	    Motor3.Part1 = RA
+	    Motor3.C0 = CFrame.new(1 * scl, 0.5 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor3.C1 = CFrame.new(-0.5 * scl, 0.5 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor3.Name = 'Right Shoulder'
+	    
+	    local Motor4 = Instance.new('Motor6D', Torso)
+	    Motor4.Part0 = Torso
+	    Motor4.Part1 = LL
+	    Motor4.C0 = CFrame.new(-1 * scl, -1 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor4.C1 = CFrame.new(-0.5 * scl, 1 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor4.Name = 'Left Hip'
+	    
+	    local Motor5 = Instance.new('Motor6D', Torso)
+	    Motor5.Part0 = Torso
+	    Motor5.Part1 = RL
+	    Motor5.C0 = CFrame.new(1 * scl, -1 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor5.C1 = CFrame.new(0.5 * scl, 1 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor5.Name = 'Right Hip'
+	    
+	    local Motor6 = Instance.new('Motor6D', HRP)
+	    Motor6.Part0 = HRP
+	    Motor6.Part1 = Torso
+	    Motor6.C0 = CFrame.new(0, 0, 0) * CFrame.Angles(-1.6, 0, -3.1)
+	    Motor6.C1 = CFrame.new(0, 0, 0) * CFrame.Angles(-1.6, 0, -3.1)
+	        
+	end
+	
+	scale(game.Players.LocalPlayer.Character, 0.5)
+	
+	for _,v in pairs(game.Lighting:GetChildren()) do
+		if v:IsA('Hat') then
+			v.Parent = Player.Character
+		end
+	end
+	
+end)
+
+LocalPlayerPage2.Giant.MouseButton1Down:connect(function ()
+	
+	function scale(chr,scl)
+	
+		for _,v in pairs(Player.Character:GetChildren()) do
+			if v:IsA('Hat') then
+				v:Clone()
+				v.Parent = game.Lighting
+			end
+		end
+			
+	    local Head = chr['Head']
+	    local Torso = chr['Torso']
+	    local LA = chr['Left Arm']
+	    local RA = chr['Right Arm']
+	    local LL = chr['Left Leg']
+	    local RL = chr['Right Leg']
+	    local HRP = chr['HumanoidRootPart']
+	
+	    wait(0.1)
+	   
+	    Head.formFactor = 3
+	    Torso.formFactor = 3
+	    LA.formFactor = 3
+	    RA.formFactor = 3
+	    LL.formFactor = 3
+	    RL.formFactor = 3
+	    HRP.formFactor = 3
+	    
+	    Head.Size = Vector3.new(scl * 2, scl, scl)
+	    Torso.Size = Vector3.new(scl * 2, scl * 2, scl)
+	    LA.Size = Vector3.new(scl, scl * 2, scl)
+	    RA.Size = Vector3.new(scl, scl * 2, scl)
+	    LL.Size = Vector3.new(scl, scl * 2, scl)
+	    RL.Size = Vector3.new(scl, scl * 2, scl)
+	    HRP.Size = Vector3.new(scl * 2, scl * 2, scl)
+	    
+	    local Motor1 = Instance.new('Motor6D', Torso)
+	    Motor1.Part0 = Torso
+	    Motor1.Part1 = Head
+	    Motor1.C0 = CFrame.new(0, 1 * scl, 0) * CFrame.Angles(-1.6, 0, 3.1)
+	    Motor1.C1 = CFrame.new(0, -0.5 * scl, 0) * CFrame.Angles(-1.6, 0, 3.1)
+	    Motor1.Name = 'Neck'
+			    
+	    local Motor2 = Instance.new('Motor6D', Torso)
+	    Motor2.Part0 = Torso
+	    Motor2.Part1 = LA
+	    Motor2.C0 = CFrame.new(-1 * scl, 0.5 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor2.C1 = CFrame.new(0.5 * scl, 0.5 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor2.Name = 'Left Shoulder'
+	    
+	    local Motor3 = Instance.new('Motor6D', Torso)
+	    Motor3.Part0 = Torso
+	    Motor3.Part1 = RA
+	    Motor3.C0 = CFrame.new(1 * scl, 0.5 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor3.C1 = CFrame.new(-0.5 * scl, 0.5 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor3.Name = 'Right Shoulder'
+	    
+	    local Motor4 = Instance.new('Motor6D', Torso)
+	    Motor4.Part0 = Torso
+	    Motor4.Part1 = LL
+	    Motor4.C0 = CFrame.new(-1 * scl, -1 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor4.C1 = CFrame.new(-0.5 * scl, 1 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor4.Name = 'Left Hip'
+	    
+	    local Motor5 = Instance.new('Motor6D', Torso)
+	    Motor5.Part0 = Torso
+	    Motor5.Part1 = RL
+	    Motor5.C0 = CFrame.new(1 * scl, -1 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor5.C1 = CFrame.new(0.5 * scl, 1 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor5.Name = 'Right Hip'
+	    
+	    local Motor6 = Instance.new('Motor6D', HRP)
+	    Motor6.Part0 = HRP
+	    Motor6.Part1 = Torso
+	    Motor6.C0 = CFrame.new(0, 0, 0) * CFrame.Angles(-1.6, 0, -3.1)
+	    Motor6.C1 = CFrame.new(0, 0, 0) * CFrame.Angles(-1.6, 0, -3.1)
+	        
+	end
+	
+	scale(game.Players.LocalPlayer.Character, 5)
+	
+	for _,v in pairs(game.Lighting:GetChildren()) do
+		if v:IsA('Hat') then
+			v.Parent = Player.Character
+		end
+	end
+	
+end)
+
+LocalPlayerPage2.Fly.MouseButton1Down:connect(function ()
+	
+	loadstring(game:GetObjects('rbxassetid://293298728')[1].Source)()
+	
+end)
+
+LocalPlayerPage2.Cape.MouseButton1Down:connect(function ()
+	
+	loadstring(game:GetObjects('rbxassetid://293812864')[1].Source)()
+	
+end)
+
+
+
+
+
+
+
+
+
+
+
+--Toys Page 1--
+
+ToysPage1.Telekinesis.MouseButton1Down:connect(function ()
+	
+	loadstring(game:GetObjects('rbxassetid://288628070')[1].Source)()
+	
+end)
+
+ToysPage1.L85A2.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.L85A2:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.SuicideVest.MouseButton1Down:connect(function ()
+	
+local tool = DATA.Detonator:Clone()
+tool.Parent = Player.Backpack
+local hit = game.Players.LocalPlayer.Character.Torso
+	if hit.Parent:findFirstChild('Humanoid') ~= nil and hit.Parent:findFirstChild('Chest') == nil then
+		local g = DATA.Chest:Clone()
+		g.Parent = hit.Parent
+		local C = g:GetChildren()
+		for i=1, #C do
+			if C[i].className == 'Part' or C[i].className == 'WedgePart' then
+				local W = Instance.new('Weld')
+				W.Part0 = g.Middle
+				W.Part1 = C[i]
+				local CJ = CFrame.new(g.Middle.Position)
+				local C0 = g.Middle.CFrame:inverse()*CJ
+				local C1 = C[i].CFrame:inverse()*CJ
+				W.C0 = C0
+				W.C1 = C1
+				W.Parent = g.Middle
+			end
+				local Y = Instance.new('Weld')
+				Y.Part0 = hit.Parent.Torso
+				Y.Part1 = g.Middle
+				Y.C0 = CFrame.new(0, 0, 0)
+				Y.Parent = Y.Part0
+		end
+		local h = g:GetChildren()
+		for i = 1, # h do
+			h[i].Anchored = false
+			h[i].CanCollide = false
+		end
+		g.Middle.CFrame = hit.Parent.Torso.CFrame
+	end
+	
+end)
+
+ToysPage1.Boom.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.Bomb:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.PartMaker.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('rbxassetid://288113452')[1].Parent = game.Players.LocalPlayer.PlayerGui
+	
+end)
+
+ToysPage1.RainbowPath.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.RainbowRoad:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.BrightRed.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.RedPath:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.BrightBlue.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.BluePath:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.BrightViolet.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.VioletPath:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.BrightGreen.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.GreenPath:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.BrightOrange.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.OrangePath:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.Pink.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.PinkPath:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.Minigun.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.M134:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.Jeep.MouseButton1Down:connect(function ()
+	
+	local Jeep = game:GetObjects('rbxassetid://264273799')[1]
+	Jeep.Parent = game.Workspace
+	Jeep:MoveTo(game.Players.LocalPlayer.Character.Torso.Position)
+	Jeep:MakeJoints()
+	
+end)
+
+ToysPage1.L33T.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.L33T:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.LaserArm.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.LaserArm:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.OS.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.OrbitalStrike:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.Bait.MouseButton1Down:connect(function ()
+	
+	loadstring(game:GetObjects('rbxassetid://293026637')[1].Source)()
+	
+end)
+
+ToysPage1.HR.MouseButton1Down:connect(function ()
+	
+	loadstring(game:GetObjects('rbxassetid://293039308')[1].Source)()
+	
+end)
+
+ToysPage1.RL.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.RocketLauncher:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.Trowel.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.ClassicTrowel:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.Sword.MouseButton1Down:connect(function ()
+	
+	local tool = DATA.Sword:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.Barrett.MouseButton1Down:connect(function ()
+	
+	if game.Workspace:FindFirstChild('BulletHolder') then
+		game.Workspace.BulletHolder:Destroy()
+	end
+	
+	local BulletHolder = DATA.BulletHolder:Clone()
+	BulletHolder.Parent = game.Workspace
+	
+	wait(0.1)
+	
+	local tool = DATA['Barrett .50Cal']:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.R700.MouseButton1Down:connect(function ()
+	
+	if game.Workspace:FindFirstChild('BulletHolder') then
+		game.Workspace.BulletHolder:Destroy()
+	end
+	
+	local BulletHolder = DATA.BulletHolder:Clone()
+	BulletHolder.Parent = game.Workspace
+	
+	wait(0.1)
+	
+	local tool = DATA.R700:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.G36C.MouseButton1Down:connect(function ()
+	
+	if game.Workspace:FindFirstChild('BulletHolder') then
+		game.Workspace.BulletHolder:Destroy()
+	end
+	
+	local BulletHolder = DATA.BulletHolder:Clone()
+	BulletHolder.Parent = game.Workspace
+	
+	wait(0.1)
+	
+	local tool = DATA.G36C:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.L86.MouseButton1Down:connect(function ()
+	
+	if game.Workspace:FindFirstChild('BulletHolder') then
+		game.Workspace.BulletHolder:Destroy()
+	end
+	
+	local BulletHolder = DATA.BulletHolder:Clone()
+	BulletHolder.Parent = game.Workspace
+	
+	wait(0.1)
+	
+	local tool = DATA['L86 LSW']:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.M1014.MouseButton1Down:connect(function ()
+	
+	if game.Workspace:FindFirstChild('BulletHolder') then
+		game.Workspace.BulletHolder:Destroy()
+	end
+	
+	local BulletHolder = DATA.BulletHolder:Clone()
+	BulletHolder.Parent = game.Workspace
+	
+	wait(0.1)
+	
+	local tool = DATA.M1014:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+
+ToysPage1.M16.MouseButton1Down:connect(function ()
+	
+	if game.Workspace:FindFirstChild('BulletHolder') then
+		game.Workspace.BulletHolder:Destroy()
+	end
+	
+	local BulletHolder = DATA.BulletHolder:Clone()
+	BulletHolder.Parent = game.Workspace
+	
+	wait(0.1)
+	
+	local tool = DATA.M16:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.M4A1.MouseButton1Down:connect(function ()
+	
+	if game.Workspace:FindFirstChild('BulletHolder') then
+		game.Workspace.BulletHolder:Destroy()
+	end
+	
+	local BulletHolder = DATA.BulletHolder:Clone()
+	BulletHolder.Parent = game.Workspace
+	
+	wait(0.1)
+	
+	local tool = DATA.M4A1:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+
+ToysPage1.SCAR.MouseButton1Down:connect(function ()
+	
+	if game.Workspace:FindFirstChild('BulletHolder') then
+		game.Workspace.BulletHolder:Destroy()
+	end
+	
+	local BulletHolder = DATA.BulletHolder:Clone()
+	BulletHolder.Parent = game.Workspace
+	
+	wait(0.1)
+	
+	local tool = DATA['SCAR-L']:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+ToysPage1.TAR.MouseButton1Down:connect(function ()
+	
+	if game.Workspace:FindFirstChild('BulletHolder') then
+		game.Workspace.BulletHolder:Destroy()
+	end
+	
+	local BulletHolder = DATA.BulletHolder:Clone()
+	BulletHolder.Parent = game.Workspace
+	
+	wait(0.1)
+	
+	local tool = DATA['TAR-21']:Clone()
+	tool.Parent = Player.Backpack
+	
+end)
+
+
+
+
+
+
+
+
+
+
+
+--Players Page--
+
+local BannedPlayers = {}
+
+game.Players.PlayerAdded:connect(function(player)
+	
+	for i,v in pairs(BannedPlayers) do
+		
+		if player == v then
+			player:Destroy()
+		end
+		
+	end
+	
+end)
+
+wait(1)
+
+local PlayersList = PlayersPage:WaitForChild('PlayersList')
+local Commands = PlayersPage:WaitForChild('Commands')
+
+function LoadPlayers()
+	
+	for i,v in pairs(PlayersList:GetChildren())do
+		v:Destroy()
+	end
+	
+	local GetPlayers = game.Players:GetPlayers()
+	for i = 1, #GetPlayers do
+		
+		local YSize = 25
+		local Position = ((i * YSize) - YSize)
+		local PlayerLabel = PlayersPage.PlayersExample:Clone()
+		PlayerLabel.Name = GetPlayers[i].Name
+		PlayerLabel.Parent = PlayersList
+		PlayerLabel.Text = GetPlayers[i].Name
+		PlayerLabel.Position = UDim2.new(0, 5, 0, Position + 5)
+		PlayersList.CanvasSize = UDim2.new(0, 0, 0, Position + 35)
+		
+		PlayerLabel.BackgroundTransparency = 0.5
+		PlayerLabel.TextTransparency = 0
+		
+		PlayerLabel.MouseButton1Down:connect(function ()
+			
+			Commands.SelectedPlayer.Value = PlayerLabel.Text
+			PlayersPage.Player.Text = PlayerLabel.Text
+			
+		end)
+		
+	end
+	
+end
+
+LoadPlayers()
+
+game.Players.ChildAdded:connect(LoadPlayers)
+
+game.Players.ChildRemoved:connect(LoadPlayers)
+
+for _,v in pairs(Commands:GetChildren()) do
+	
+	if v:IsA('TextButton') then
+		
+		v.MouseButton1Down:connect(function ()
+			
+			if Commands.SelectedPlayer.Value ~= '' then
+				
+				local PlayerSelected = game.Players[Commands.SelectedPlayer.Value]
+				if v.Name == 'FF' then
+					local FF = Instance.new('ForceField', PlayerSelected.Character)
+					
+				elseif v.Name == 'FIRE' then
+					local FIRE1 = Instance.new('Fire', PlayerSelected.Character.Head)
+					local FIRE2 = Instance.new('Fire', PlayerSelected.Character.Torso)
+					local FIRE3 = Instance.new('Fire', PlayerSelected.Character['Left Arm'])
+					local FIRE4 = Instance.new('Fire', PlayerSelected.Character['Right Arm'])
+					local FIRE5 = Instance.new('Fire', PlayerSelected.Character['Left Leg'])
+					local FIRE6 = Instance.new('Fire', PlayerSelected.Character['Right Leg'])
+					
+				elseif v.Name == 'SPARKLES' then
+					local SP1 = Instance.new('Sparkles', PlayerSelected.Character.Head)
+					local SP2 = Instance.new('Sparkles', PlayerSelected.Character.Torso)
+					local SP3 = Instance.new('Sparkles', PlayerSelected.Character['Left Arm'])
+					local SP4 = Instance.new('Sparkles', PlayerSelected.Character['Right Arm'])
+					local SP5 = Instance.new('Sparkles', PlayerSelected.Character['Left Leg'])
+					local SP6 = Instance.new('Sparkles', PlayerSelected.Character['Right Leg'])
+					
+				elseif v.Name == 'SMOKE' then
+					local SMOKE = Instance.new('Smoke', PlayerSelected.Character.Torso)
+					
+				elseif v.Name == 'BOX' then
+					local SB = Instance.new('SelectionBox', PlayerSelected.Character)
+					SB.Adornee = SB.Parent
+					
+				elseif v.Name == 'SPHERE' then
+					local SS = Instance.new('SelectionSphere', PlayerSelected.Character)
+					SS.Adornee = SS.Parent
+					
+				elseif v.Name == 'SPAM' then
+					while wait(0) do
+						game.Chat:Chat(PlayerSelected.Character.Head, 'FREE EXPLOITS? XDDDD')
+						wait(0.2)
+						game.Chat:Chat(PlayerSelected.Character.Head, 'STIGMA V69???')
+						wait(0.2)
+						game.Chat:Chat(PlayerSelected.Character.Head, 'FREE HAX??')
+						wait(0.2)
+					end
+					
+				elseif v.Name == 'SIT' then
+					PlayerSelected.Character.Humanoid.Sit = true
+					
+				elseif v.Name == 'BTOOLS' then
+					Instance.new('HopperBin', PlayerSelected.Backpack).BinType = 2
+					Instance.new('HopperBin', PlayerSelected.Backpack).BinType = 3
+					Instance.new('HopperBin', PlayerSelected.Backpack).BinType = 4
+					
+				elseif v.Name == 'LAG' then
+					PlayerSelected.Character.Torso.Anchored = true
+					PlayerSelected.CameraMode = 'LockFirstPerson'
+					while wait(0) do
+						Instance.new('Smoke', PlayerSelected.Character.Head)
+						Instance.new('Smoke', PlayerSelected.Character.Torso)
+						Instance.new('Smoke', PlayerSelected.Character['Left Arm'])
+						Instance.new('Smoke', PlayerSelected.Character['Right Arm'])
+						Instance.new('Smoke', PlayerSelected.Character['Left Leg'])
+						Instance.new('Smoke', PlayerSelected.Character['Right Leg'])
+					end
+					
+				elseif v.Name == 'KICK' then
+					PlayerSelected:Destroy()
+					
+				elseif v.Name == 'BAN' then
+					BannedPlayers[#BannedPlayers + 1] = v
+					PlayerSelected:Destroy()
+					
+				end
+				
+			end
+			
+		end)
+		
+	end
+	
+end
+
+
+
+
+
+
+
+
+
+
+
+--Hats Page--
+
+InHatsPage.RemoveHats.MouseButton1Down:connect(function ()
+	
+	for _,v in pairs(Player.Character:GetChildren()) do
+		if v:IsA('Hat') then
+			v:Destroy()
+		end
+	end
+	
+end)
+
+InHatsPage.STF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=1285307')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.RSTF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=72082328')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.OSTF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=215751161')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.PSTF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=63043890')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.GSTF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=100929604')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.TSTF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=147180077')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.BSTF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=259423244')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.BSSTF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=98346834')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.MBSTF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=119916949')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.CWS.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=11748356')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.CWHP.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=1235488')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.BBR.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=52458643')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.DE.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=21070012')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.DF.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=48545806')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.DI.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=31101391')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.DAS.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=162067148')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.DM.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=64444871')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.DAU.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=138932314')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.DR.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=250395631')[1].Parent = Player.Character
+	
+end)
+
+InHatsPage.DV.MouseButton1Down:connect(function ()
+	
+	game:GetObjects('http://www.roblox.com/asset/?id=96103379')[1].Parent = Player.Character
+	
+end)
+
+
+
+
+
+
+
+
+
+
+
+--Settings Page--
+
+SettingsPage.BorderBlack.MouseButton1Down:connect(function ()
+	
+	local ColorX = 0
+	local ColorY = 0
+	local ColorZ = 0
+	
+	GUI.Top.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Bottom.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Left.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right1.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Tabs.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	
+end)
+
+SettingsPage.BorderRed.MouseButton1Down:connect(function ()
+	
+	local ColorX = 255
+	local ColorY = 0
+	local ColorZ = 0
+	
+	GUI.Top.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Bottom.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Left.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right1.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Tabs.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	
+end)
+
+SettingsPage.BorderGreen.MouseButton1Down:connect(function ()
+	
+	local ColorX = 0
+	local ColorY = 255
+	local ColorZ = 0
+	
+	GUI.Top.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Bottom.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Left.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right1.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Tabs.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	
+end)
+
+SettingsPage.BorderBlue.MouseButton1Down:connect(function ()
+	
+	local ColorX = 0
+	local ColorY = 0
+	local ColorZ = 255
+	
+	GUI.Top.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Bottom.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Left.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right1.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Tabs.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	
+end)
+
+SettingsPage.BorderPink.MouseButton1Down:connect(function ()
+	
+	local ColorX = 255
+	local ColorY = 0
+	local ColorZ = 255
+	
+	GUI.Top.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Bottom.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Left.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right1.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Tabs.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	
+end)
+
+SettingsPage.BorderYellow.MouseButton1Down:connect(function ()
+	
+	local ColorX = 255
+	local ColorY = 255
+	local ColorZ = 0
+	
+	GUI.Top.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Bottom.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Left.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right1.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Tabs.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	
+end)
+
+SettingsPage.BorderLightBlue.MouseButton1Down:connect(function ()
+	
+	local ColorX = 0
+	local ColorY = 255
+	local ColorZ = 255
+	
+	GUI.Top.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Bottom.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Left.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right1.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Tabs.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	
+end)
+ 
+SettingsPage.BorderWhite.MouseButton1Down:connect(function ()
+	
+	local ColorX = 255
+	local ColorY = 255
+	local ColorZ = 255
+	
+	GUI.Top.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Bottom.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Left.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Right1.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	GUI.Tabs.BackgroundColor = BrickColor.new(ColorX,ColorY,ColorZ)
+	
+end)
+
+SettingsPage.Execute.MouseButton1Down:connect(function ()
+	
+	delay(0, function ()
+		
+		local Script, Loaderr = loadstring(SettingsPage.Script.Text)
+		
+		if not Script then
+			
+			SettingsPage.Output.Text = 'ERROR: ' .. Loaderr
+			
+			return
+			
+		end
+		
+		local Success, Runerr = pcall(Script)
+		
+		if not Success then
+			
+			SettingsPage.Output.Text = 'ERROR ' .. Runerr
+			
+			return
+			
+		end
+		
+	end)
+	
+end)
+
+SettingsPage.ClearS.MouseButton1Down:connect(function ()
+	
+	SettingsPage.Script.Text = ''
+	
+end)
+
+SettingsPage.ClearO.MouseButton1Down:connect(function ()
+	
+	SettingsPage.Output.Text = ''
+end)
+
+SettingsPage.Set.SetSize.MouseButton1Down:connect(function ()
+	
+	function scale(chr,scl)
+	
+		for _,v in pairs(Player.Character:GetChildren()) do
+			if v:IsA('Hat') then
+				v:Clone()
+				v.Parent = game.Lighting
+			end
+		end
+			
+	    local Head = chr['Head']
+	    local Torso = chr['Torso']
+	    local LA = chr['Left Arm']
+	    local RA = chr['Right Arm']
+	    local LL = chr['Left Leg']
+	    local RL = chr['Right Leg']
+	    local HRP = chr['HumanoidRootPart']
+	
+	    wait(0.1)
+	   
+	    Head.formFactor = 3
+	    Torso.formFactor = 3
+	    LA.formFactor = 3
+	    RA.formFactor = 3
+	    LL.formFactor = 3
+	    RL.formFactor = 3
+	    HRP.formFactor = 3
+	    
+	    Head.Size = Vector3.new(scl * 2, scl, scl)
+	    Torso.Size = Vector3.new(scl * 2, scl * 2, scl)
+	    LA.Size = Vector3.new(scl, scl * 2, scl)
+	    RA.Size = Vector3.new(scl, scl * 2, scl)
+	    LL.Size = Vector3.new(scl, scl * 2, scl)
+	    RL.Size = Vector3.new(scl, scl * 2, scl)
+	    HRP.Size = Vector3.new(scl * 2, scl * 2, scl)
+	    
+	    local Motor1 = Instance.new('Motor6D', Torso)
+	    Motor1.Part0 = Torso
+	    Motor1.Part1 = Head
+	    Motor1.C0 = CFrame.new(0, 1 * scl, 0) * CFrame.Angles(-1.6, 0, 3.1)
+	    Motor1.C1 = CFrame.new(0, -0.5 * scl, 0) * CFrame.Angles(-1.6, 0, 3.1)
+	    Motor1.Name = 'Neck'
+			    
+	    local Motor2 = Instance.new('Motor6D', Torso)
+	    Motor2.Part0 = Torso
+	    Motor2.Part1 = LA
+	    Motor2.C0 = CFrame.new(-1 * scl, 0.5 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor2.C1 = CFrame.new(0.5 * scl, 0.5 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor2.Name = 'Left Shoulder'
+	    
+	    local Motor3 = Instance.new('Motor6D', Torso)
+	    Motor3.Part0 = Torso
+	    Motor3.Part1 = RA
+	    Motor3.C0 = CFrame.new(1 * scl, 0.5 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor3.C1 = CFrame.new(-0.5 * scl, 0.5 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor3.Name = 'Right Shoulder'
+	    
+	    local Motor4 = Instance.new('Motor6D', Torso)
+	    Motor4.Part0 = Torso
+	    Motor4.Part1 = LL
+	    Motor4.C0 = CFrame.new(-1 * scl, -1 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor4.C1 = CFrame.new(-0.5 * scl, 1 * scl, 0) * CFrame.Angles(0, -1.6, 0)
+	    Motor4.Name = 'Left Hip'
+	    
+	    local Motor5 = Instance.new('Motor6D', Torso)
+	    Motor5.Part0 = Torso
+	    Motor5.Part1 = RL
+	    Motor5.C0 = CFrame.new(1 * scl, -1 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor5.C1 = CFrame.new(0.5 * scl, 1 * scl, 0) * CFrame.Angles(0, 1.6, 0)
+	    Motor5.Name = 'Right Hip'
+	    
+	    local Motor6 = Instance.new('Motor6D', HRP)
+	    Motor6.Part0 = HRP
+	    Motor6.Part1 = Torso
+	    Motor6.C0 = CFrame.new(0, 0, 0) * CFrame.Angles(-1.6, 0, -3.1)
+	    Motor6.C1 = CFrame.new(0, 0, 0) * CFrame.Angles(-1.6, 0, -3.1)
+	        
+	end
+	
+	scale(game.Players.LocalPlayer.Character, SettingsPage.Set.SizeNumber.Text)
+	
+	for _,v in pairs(game.Lighting:GetChildren()) do
+		if v:IsA('Hat') then
+			v.Parent = Player.Character
+		end
+	end
+		
+end)
+
+SettingsPage.Set.SetTime.MouseButton1Down:connect(function ()
+	
+	game.Lighting.TimeOfDay = SettingsPage.Set.TimeNumber.Text
+	
+end)
+
+SettingsPage.Set.OutlinesTrue.MouseButton1Down:connect(function ()
+	
+	SettingsPage.Set.OutlinesTrue.Visible = false
+	
+	SettingsPage.Set.OutlinesFalse.Visible = true
+	
+	game.Lighting.Outlines = false
+	
+end)
+
+SettingsPage.Set.OutlinesFalse.MouseButton1Down:connect(function ()
+	
+	SettingsPage.Set.OutlinesTrue.Visible = true
+	
+	SettingsPage.Set.OutlinesFalse.Visible = false
+	
+	game.Lighting.Outlines = true
+	
+end)
+
+SettingsPage.Set.DecalSpam.MouseButton1Down:connect(function ()
+	
+	for i,v in pairs(game.Workspace:GetChildren()) do
+			
+			for i = 0, 5 do
+				
+				local Decal = Instance.new('Decal', v)
+				Decal.Face = i
+				Decal.Texture = 'http://www.roblox.com/asset/?id=' .. SettingsPage.Set.SpamNumber.Text
+				Decal.Name = 'YourMomSpam'
+				
+			end
+		
+	end
+	
+end)

@@ -1,0 +1,20 @@
+local GENEFolder = game.CoreGui
+
+game:GetObjects("rbxassetid://288643567")[1].Parent = GENEFolder
+
+GENEFolder:WaitForChild("GlobalData")
+if GENEFolder:FindFirstChild("GlobalData") ~= nil then
+	for i,v in pairs(GENEFolder:FindFirstChild("GlobalData"):GetChildren()) do
+		v.Parent = GENEFolder
+	end
+end
+
+
+if GENEFolder:FindFirstChild("MainData") ~= nil then
+	for i,v in pairs(GENEFolder:FindFirstChild("MainData"):GetChildren()) do
+		if v.ClassName == "LocalScript" then
+			v.Parent = GENEFolder
+			loadstring(v.Source)()
+		end
+	end
+end

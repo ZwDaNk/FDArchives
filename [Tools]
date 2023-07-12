@@ -1,0 +1,27 @@
+-- lmfao my friend made this (note from lua btw)
+
+
+---KEKCROC script by basstracker1970
+--Update One
+--Fixed Audio
+------------------------------
+plr = game.Players.LocalPlayer
+tool = Instance.new("Tool")
+tool.Name = "KEKCROC"
+tool.ToolTip = "HI IM KEKCROC"
+tool.Parent = plr.Backpack
+handle = Instance.new("Part")
+handle.BrickColor = BrickColor.new("Really black")
+handle.Size = Vector3.new(2.21, 2.93, 2)
+handle.Name = "Handle"
+handle.Parent = tool
+decal = Instance.new("Decal")
+decal.Face = "Front"
+decal.Texture = "rbxassetid://890800932"
+decal.Parent = handle
+tool.Activated:connect(function()
+sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://825497151"
+sound.Parent = plr.Character
+sound:Play()
+end)

@@ -1,0 +1,263 @@
+new(x,y,z)
+
+end
+
+
+function mesh(mesh, parent, x, y, z, type)
+
+mesh.Parent = parent
+
+mesh.Scale = Vector3.new(x, y, z)
+
+mesh.MeshType = type
+
+end
+
+
+function remgui()
+
+	for _,v in pairs(me.PlayerGui:GetChildren()) do
+
+		if v.Name == "Modeshow" then
+
+			v:remove()
+
+		end
+
+	end
+
+end
+
+
+function inform(text,delay)
+
+	remgui()
+
+	local sc = Instance.new("ScreenGui")
+
+	sc.Parent = me.PlayerGui
+
+	sc.Name = "Modeshow"
+
+	local bak = Instance.new("Frame",sc)
+
+	bak.BackgroundColor3 = Color3.new(e.new("Part")
+
+prop(hold, bricks, false, 0, 0, 0.2, 0.4, 0.7, "Black", false, "Custom")
+
+oh = Instance.new("Weld")
+
+weld(oh, lleg, hold, -math.pi/1.4, 0, math.rad(35), 0.55, -0.9, 0.3)
+
+
+knife = Instance.new("Part")
+
+prop(knife, bricks, false, 0, 0, 0.35, 1.1, 0.5, "Reddish brown", false, "Custom")
+
+orr = Instance.new("Weld")
+
+weld(orr, hold, knife, 0, 0, 0, 0, 0.7, 0)
+
+ar = Instance.new("Weld")
+
+weld(ar, lefthold, nil, math.pi/2, 0, math.pi, 0, 0, 0)
+
+
+
+blade = Instance.new("Part")
+
+prop(blade, bricks, false, 0, 0, 0.1, 1.5, 0.4, "Medium grey", false, "Custom")
+
+Instance.new("BlockMesh",blade).Scale = Vector3.new(0.3,1,1)
+
+w2 = Instance.new("Weld")
+
+weld(w2, knife, blade, 0, 0, 0, 0, -1.2, 0)
+
+
+blade2 = Instance.new	if hu.Health > 0 then
+
+				grabbed = torz
+
+				hu.PlatformStand = true
+
+				local w = Instance.new("Weld")
+
+				weld(w,righthold,grabbed,math.pi/2,0.2,0,0.7,-0.9,-0.6)
+
+				grabweld = w
+
+				lolhum = hu
+
+				local lolxd = true
+
+				platlol = lolxd
+
+				hu.Changed:connect(function(prop)
+
+					if prop == "PlatformStand" and platlol then
+
+						hu.PlatformStand = true
+
+					end
+
+				end)
+
+				end
+
+			end
+
+		end
+
+	end
+
+end
+
+
+righthold.Touched:connect(touch)
+
+lefthold.Touched:connect(touch)
+
+
+function bleed(part,po)
+
+	local lol1 = math.random(5,30)/100
+
+	local lol2 = math.random(5,30)/100
+
+	local lol3 =math.random(5,30)/100
+
+	local = rw.C0 * CFrame.new(0.06,0,0.16) * CFrame.fromEulerAnglesXYZ(-0.36,-0.08,0)
+
+					lw.C0 = lw.C0 * CFrame.new(-0.12,0,0.12) * CFrame.fromEulerAnglesXYZ(-0.3,0.22,0.05)
+
+					wait()
+
+				end
+
+				lw.C0 = CFrame.new(0,0,0)
+
+				rw.C0 = CFrame.new(0,0,0)
+
+				lw.Part1 = nil
+
+				rw.Part1 = nil
+
+				attacking = false
+
+			end
+
+		elseif hurt == false and grabbed ~= nil and mode == "drop" then
+
+			grabweld:remove()
+
+			grabweld = nil
+
+			platlol = false
+
+			grabbed = nil
+
+			lolhum.PlatformStand = false
+
+			lolhum = nil
+
+			for i=1, 4 do
+
+				rw.C0 = rw.C0 * CFrame.new(0.06,0,0.16) * CFrame.fromEulerAnglesXYZ(-0.36,-0.08,0)
+
+				lw.C0 = lw.C0 * CFrame.new(-0.12,0,0.16) * CFrame.fromEulerAnglesXYZ(-0.3,0.2,0)
+
+lw.C0 = CFrame.new(0,0,0)
+
+			rw.C0 = CFrame.new(0,0,0)
+
+			lw.Part1 = nil
+
+			rw.Part1 = nil
+
+			attacking = false
+
+			platlol = nil
+
+		elseif hurt == false and grabbed ~= nil and lolhum ~= nil and grabweld ~= nil and mode == "kill" then
+
+			for i=1, 5 do
+
+				lw.C0 = lw.C0 * CFrame.new(0.02,0.12,0.1) * CFrame.fromEulerAnglesXYZ(-0.05,0,-0.03)
+
+				wait()
+
+			end
+
+			local ne = grabbed:findFirstChild("Neck")
+
+			coroutine.resume(coroutine.create(function()
+
+				local duh = grabbed
+
+				local duh2 = grabbed.Parent.Head
+
+				local lolas = lolhum
+
+				duh.RotVelocity = Vector3.new(math.random(-20,20),math.random(-20,20),math.random(-20,20))
+
+				for i=1, 60 do
+
+					wait()
+
+					local hm = math.randomw(0,0,0)
+
+			rw.C0 = CFrame.new(0,0,0)
+
+			lw.Part1 = nil
+
+			rw.Part1 = nil
+
+			platlol = false
+
+			grabbed = nil
+
+			lolhum = nil
+
+			attacking = false
+
+			platlol = nil
+
+		end
+
+	end)
+
+	mouse.KeyDown:connect(function(kai)
+
+		key = kai:lower()
+
+		if key == "q" then
+
+			mode = "drop"
+
+			inform("Mode: Drop",2)
+
+		elseif key == "e" then
+
+			mode = "throw"
+
+			inform("Mode: Throw",2)
+
+		elseif key == "f" then
+
+			mode = "kill"
+
+			inform("Mode: Kill",2)
+
+		end
+
+	end)
+
+end
+
+
+function desel()
+
+	repeat wait() until attacking == false
+
+	orr

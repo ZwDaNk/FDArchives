@@ -1,0 +1,49 @@
+local char = game.Players.LocalPlayer.Character
+
+local LA = Instance.new("CharacterMesh",char)
+LA.BaseTextureId = 46345362
+LA.BodyPart = "LeftArm"
+LA.MeshId = 46344860
+LA.Name = "Penguin LeftArm"
+LA.OverlayTextureId = 46345222
+local RA = Instance.new("CharacterMesh",char)
+RA.BaseTextureId = 46345362
+RA.BodyPart = "RightArm"
+RA.MeshId = 46345037
+RA.Name = "Penguin RightArm"
+RA.OverlayTextureId = 46345222
+local LL = Instance.new("CharacterMesh",char)
+LL.BaseTextureId = 46345362
+LL.BodyPart = "LeftLeg"
+LL.MeshId = 46344898
+LL.Name = "Penguin LeftLeg"
+LL.OverlayTextureId = 46345222
+local RL = Instance.new("CharacterMesh",char)
+RL.BaseTextureId = 46345362
+RL.BodyPart = "RightLeg"
+RL.MeshId = 46344972
+RL.Name = "Penguin RightLeg"
+RL.OverlayTextureId = 46345222
+local T = Instance.new("CharacterMesh",char)
+T.BaseTextureId = 46345362
+T.BodyPart = "Torso"
+T.MeshId = 46345096
+T.Name = "Penguin Torso"
+T.OverlayTextureId = 46345222
+local hat = char.Head.Mesh
+hat.MeshId = "http://www.roblox.com/asset/?id=15853464"
+hat.MeshType = "FileMesh"
+hat.Offset = Vector3.new(0,0,0)
+hat.Scale = Vector3.new(1.1,1.1,1.1)
+hat.TextureId = "http://www.roblox.com/asset/?id=15853349"
+char.Head.face:Destroy()
+
+while wait(10) do
+	local Sound = Instance.new("Sound")
+	Sound.SoundId = "http://www.roblox.com/asset/?id=207975774"
+	Sound.Volume = 1
+	Sound.Parent = workspace
+	Sound:Play()
+	wait(3)
+	Sound:Destroy()
+end

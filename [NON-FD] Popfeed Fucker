@@ -1,111 +1,104 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("BloxFeed Fucker", "DarkTheme")
-
---// FD SCRIPTS TAB \\--
+local Window = Library.CreateLib("PopFeed Fucker", "DarkTheme")
 
 local Tab = Window:NewTab("Functions")
-local Section = Tab:NewSection("Main Section")
+local Section = Tab:NewSection("Main")
 
+--// Main Tab \\--
 
-Section:NewButton("Spam Hard R On Search", "Bypass", function()
-    while true do
-    local args = {
-    [1] = "nigger",
-    [2] = 1
-    }
+Section:NewButton("Search Hard R", "ButtonInfo", function()
+	while true do
+		local args = {
+			[1] = "nigger",
+			[2] = 1
+		}
 
-    game:GetService("ReplicatedStorage"):WaitForChild("BloxbizRemotes"):WaitForChild("PopfeedOnSearchImages"):InvokeServer(unpack(args))
-    end
+		game:GetService("ReplicatedStorage"):WaitForChild("BloxbizRemotes"):WaitForChild("PopfeedOnSearchImages"):InvokeServer(unpack(args))
+	end
 end)
 
-Section:NewButton("Tame Medical Gore Decalspam", "Bypass", function()
-    while true do
-wait(0)
-local args = {
-    [1] = "Hey guys",
-    [2] = {
-        [1] = "12559762026"
-    }
-}
-
-Section:NewButton("Pepe The Frog Spam", "Offensive Symbol", function()
-    while true do
-wait(0)
-local args = {
-    [1] = "Hey guys",
-    [2] = {
-        [1] = "8405243666"
-    }
-}
-
-Section:NewButton("VibingLeaf MARIO", "Internet Horror", function()
-    while true do
-wait(0)
-local args = {
-    [1] = "Hey guys",
-    [2] = {
-        [1] = "13573433022"
-    }
-}
-
-Section:NewButton("VibingLeaf SpongeBob", "Internet Horror", function()
-    while true do
-wait(0)
-local args = {
-    [1] = "Hey guys",
-    [2] = {
-        [1] = "13426767266"
-    }
-}
-
-Section:NewButton("Red Mist", "Internet Horror", function()
-    while true do
-wait(0)
-local args = {
-    [1] = "Hey guys",
-    [2] = {
-        [1] = "10222468623"
-    }
-}
-
-Section:NewButton("LemonParty Shock Site Spam", "Bypass", function()
-    while true do
-wait(0)
-local args = {
-    [1] = "adoptmesextape ",
-    [2] = {
-        [1] = "47088015"
-    }
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("BloxbizRemotes"):WaitForChild("PopfeedOnPostContent"):InvokeServer(unpack(args))
-end
+Section:NewButton("Tame Medical Gore", "ButtonInfo", function()
+	while true do
+		wait(0)
+		local args = {
+			[1] = "Hey guys",
+			[2] = {
+				[1] = "12559762026"
+			}
+		}
+	end
 end)
 
-Section:NewButton("Hard R Spam", "Bypass", function()
-    while true do
-wait(0)
-local args = {
-    [1] = "hi",
-    [2] = {
-        [1] = "7736547669"
-    }
-}
+Section:NewButton("Pepe The Frog", "ButtonInfo", function()
+	while true do
+		wait(0)
+		local args = {
+			[1] = "Hey guys",
+			[2] = {
+				[1] = "8405243666"
+			}
+		}
+	end
+end)
 
-game:GetService("ReplicatedStorage"):WaitForChild("BloxbizRemotes"):WaitForChild("PopfeedOnPostContent"):InvokeServer(unpack(args))
-end
+Section:NewButton("Red Mist", "ButtonInfo", function()
+	while true do
+		wait(0)
+		local args = {
+			[1] = "Hey guys",
+			[2] = {
+				[1] = "10222468623"
+			}
+		}
+	end
+end)
+
+Section:NewButton("LemonParty", "ButtonInfo", function()
+	while true do
+		wait(0)
+		local args = {
+			[1] = "Hey guys",
+			[2] = {
+				[1] = "47088015"
+			}
+		}
+	end
+end)
+
+Section:NewButton("Hard R", "ButtonInfo", function()
+	while true do
+		wait(0)
+		local args = {
+			[1] = "Hey guys",
+			[2] = {
+				[1] = "7736547669"
+			}
+		}
+	end
 end)
 
 Section:NewButton("CCC Spam", "ButtonInfo", function()
-        while true do
-wait(0)
-local args = {
-    [1] = "I AM THE OVERPOWERED CCC",
-    [2] = {
-        [1] = "4967531391"
-    }
-}
+	while true do
+		wait(0)
+		local args = {
+			[1] = "I AM THE OVERPOWERED CCC",
+			[2] = {
+				[1] = "4967531391"
+			}
+		}
+	end
+end)
 
-game:GetService("ReplicatedStorage"):WaitForChild("BloxbizRemotes"):WaitForChild("PopfeedOnPostContent"):InvokeServer(unpack(args))
-end
+--// Other Script Tab \\--
+
+local Tab = Window:NewTab("Other Scripts")
+local GUISection = Tab:NewSection("Universal")
+
+
+GUISection:NewButton("USPLoader", "ButtonInfo", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/Htg74KBd"))()
+end)
+
+GUISection:NewButton("Infinite Yield", "ButtonInfo", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)

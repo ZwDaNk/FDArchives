@@ -1,0 +1,111 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BloxFeed Fucker", "DarkTheme")
+
+--// FD SCRIPTS TAB \\--
+
+local Tab = Window:NewTab("Functions")
+local Section = Tab:NewSection("Main Section")
+
+
+Section:NewButton("Spam Hard R On Search", "Bypass", function()
+    while true do
+    local args = {
+    [1] = "nigger",
+    [2] = 1
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("BloxbizRemotes"):WaitForChild("PopfeedOnSearchImages"):InvokeServer(unpack(args))
+    end
+end)
+
+Section:NewButton("Tame Medical Gore Decalspam", "Bypass", function()
+    while true do
+wait(0)
+local args = {
+    [1] = "Hey guys",
+    [2] = {
+        [1] = "12559762026"
+    }
+}
+
+Section:NewButton("Pepe The Frog Spam", "Offensive Symbol", function()
+    while true do
+wait(0)
+local args = {
+    [1] = "Hey guys",
+    [2] = {
+        [1] = "8405243666"
+    }
+}
+
+Section:NewButton("VibingLeaf MARIO", "Internet Horror", function()
+    while true do
+wait(0)
+local args = {
+    [1] = "Hey guys",
+    [2] = {
+        [1] = "13573433022"
+    }
+}
+
+Section:NewButton("VibingLeaf SpongeBob", "Internet Horror", function()
+    while true do
+wait(0)
+local args = {
+    [1] = "Hey guys",
+    [2] = {
+        [1] = "13426767266"
+    }
+}
+
+Section:NewButton("Red Mist", "Internet Horror", function()
+    while true do
+wait(0)
+local args = {
+    [1] = "Hey guys",
+    [2] = {
+        [1] = "10222468623"
+    }
+}
+
+Section:NewButton("LemonParty Shock Site Spam", "Bypass", function()
+    while true do
+wait(0)
+local args = {
+    [1] = "adoptmesextape ",
+    [2] = {
+        [1] = "47088015"
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BloxbizRemotes"):WaitForChild("PopfeedOnPostContent"):InvokeServer(unpack(args))
+end
+end)
+
+Section:NewButton("Hard R Spam", "Bypass", function()
+    while true do
+wait(0)
+local args = {
+    [1] = "hi",
+    [2] = {
+        [1] = "7736547669"
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BloxbizRemotes"):WaitForChild("PopfeedOnPostContent"):InvokeServer(unpack(args))
+end
+end)
+
+Section:NewButton("CCC Spam", "ButtonInfo", function()
+        while true do
+wait(0)
+local args = {
+    [1] = "I AM THE OVERPOWERED CCC",
+    [2] = {
+        [1] = "4967531391"
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("BloxbizRemotes"):WaitForChild("PopfeedOnPostContent"):InvokeServer(unpack(args))
+end
+end)

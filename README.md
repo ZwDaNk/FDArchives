@@ -1,2 +1,1 @@
-# LuasLegacyScripts
-This is a bunch of scripts I collected. Please, PLEASE do not claim this as yours.
+Welcome to the FD Archives! This is a continuation of my old repository which archived old FD scripts.

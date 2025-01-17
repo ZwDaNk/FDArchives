@@ -3685,9 +3685,6 @@ Close.MouseButton1Down:connect(function()
 	IntroSong:Play()
 	Clicksound:Play()
 	BG:TweenSize(UDim2.new(0,550,0,0),"Out")
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, true)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
 	Frame.Active = false
 	wait(1.3)
 	Open.Visible = true
@@ -3711,9 +3708,6 @@ Open.MouseButton1Down:connect(function()
 	IntroSong:Play()
 	Clicksound:Play()
 	BG:TweenSize(UDim2.new(0,550,0,490),"Out")
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, true)
-	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
 	Frame.Active = true
 	Open.Visible = false
 end)
@@ -5268,8 +5262,6 @@ Intro.Active = false
 Frame.Position = UDim2.new(0,0,0,-460)
 Frame.Visible = true
 Frame:TweenPosition(UDim2.new(0,0,0,0),"Out")
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
 for i,v in pairs(Frame:GetChildren()) do
 	v.TextTransparency = 0
 end

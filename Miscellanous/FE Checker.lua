@@ -1,5 +1,5 @@
 if game.Workspace.FilteringEnabled == true then
-print("This game is FE")
+warn("This game is FE")
 elseif
-print("This game is NOT FE")
+print("This game is FD!")
 end

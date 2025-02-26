@@ -27,4 +27,4 @@ msg.Text = [[
 ░░░░░░░
 ]]
 
-message.Parent = game.Workspace
+msg.Parent = game.Workspace

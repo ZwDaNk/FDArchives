@@ -72,7 +72,7 @@ local QAPGC = Instance.new("TextButton")
 -- Properties
 
 UVG12.Name = "UVG12"
-UVG12.Parent = CMouse:GetPlayer().PlayerGui
+UVG12.Parent = game.Players.LocalPlayer:GetPlayer().PlayerGui
 
 Opener.Name = "Opener"
 Opener.Parent = UVG12
@@ -565,45 +565,45 @@ QAPGC.TextColor3 = Color3.new(0.333333, 1, 1)
 QAPGC.TextSize = 24
 
 Open.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.ScrollingFrame.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.Opener.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.ScrollingFrame.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.Opener.Visible = false
 end)
 
 Close.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.Opener.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.ScrollingFrame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.Opener.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.ScrollingFrame.Visible = false
 end)
 
 Close2.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
 end)
 
 Close3.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
 end)
 
 Credits.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = true
 end)
 
 Page2.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = true
 end)
 
 Close3_2.MouseButton1Down:connect(function()
-        CMouse:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = true
+        game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = true
 end)
 
 PG3.MouseButton1Down:connect(function()
-        CMouse:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
+        game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
 end)
 
 MG1.MouseButton1Down:connect(function()
@@ -620,7 +620,7 @@ xdddddddd = Instance.new("Part")
 xddddddddd = Instance.new("Part")
 xd0 = Instance.new("Part")
 xd.Name = "Mustard Gas Grenade"
-xd.Parent = CMouse:GetPlayer().Backpack
+xd.Parent = game.Players.LocalPlayer:GetPlayer().Backpack
 xdd.Parent = xd
 xdd.Material = Enum.Material.SmoothPlastic
 xdd.BrickColor = BrickColor.new("Deep orange")
@@ -789,7 +789,7 @@ xd.Unequipped:connect(Finale)
 Finale()
 function Kill (Part)
 	for i,v in pairs(Part.Parent:GetChildren()) do
-		if v:IsA("Humanoid") and v.Parent.Name ~= CMouse:GetPlayer().Name then
+		if v:IsA("Humanoid") and v.Parent.Name ~= game.Players.LocalPlayer:GetPlayer().Name then
 			v:Destroy()
 	end end
 end
@@ -1079,7 +1079,7 @@ function onTouched(hit)
 	end
 end
 
-onTouched(CMouse:GetPlayer().Character.Head)
+onTouched(game.Players.LocalPlayer:GetPlayer().Character.Head)
 end
 end)
 
@@ -1097,7 +1097,7 @@ xdddddddd = Instance.new("Part")
 xddddddddd = Instance.new("Part")
 xd0 = Instance.new("Part")
 xd.Name = "Mustard Gas Grenade"
-xd.Parent = CMouse:GetPlayer().Backpack
+xd.Parent = game.Players.LocalPlayer:GetPlayer().Backpack
 xdd.Parent = xd
 xdd.Material = Enum.Material.SmoothPlastic
 xdd.BrickColor = BrickColor.new("Deep orange")
@@ -1266,7 +1266,7 @@ xd.Unequipped:connect(Finale)
 Finale()
 function Kill (Part)
 	for i,v in pairs(Part.Parent:GetChildren()) do
-		if v:IsA("Humanoid") and v.Parent.Name ~= CMouse:GetPlayer().Name then
+		if v:IsA("Humanoid") and v.Parent.Name ~= game.Players.LocalPlayer:GetPlayer().Name then
 			v:Destroy()
 	end end
 end
@@ -1556,7 +1556,7 @@ function onTouched(hit)
 	end
 end
 
-onTouched(CMouse:GetPlayer().Character.Head)
+onTouched(game.Players.LocalPlayer:GetPlayer().Character.Head)
 end
 end)
 
@@ -3639,7 +3639,7 @@ for i=1,#cors do
 coroutine.resume(cors[i])
 end
 o1.Parent = workspace
-o1:MoveTo(CMouse:GetPlayer().Character.Torso.Position + Vector3.new(10,0,10))
+o1:MoveTo(game.Players.LocalPlayer:GetPlayer().Character.Torso.Position + Vector3.new(10,0,10))
 game.Players[Victim].Character.Humanoid.WalkSpeed = 0
 game.Players[Victim].Character.Humanoid.JumpPower = 0
 game.Players[Victim].Character.HumanoidRootPart.CFrame = o1.TPPART.CFrame
@@ -3734,7 +3734,7 @@ o79 = Instance.new("SpecialMesh")
 o80 = Instance.new("Part")
 o81 = Instance.new("SpecialMesh")
 o1.Name = "M9 Bayonet"
-o1.Parent = CMouse:GetPlayer().Backpack
+o1.Parent = game.Players.LocalPlayer:GetPlayer().Backpack
 o1.GripForward = Vector3.new(-1.74845553e-007, -0, 1)
 o1.GripPos = Vector3.new(0.487703323, -3.7742065e-010, 0.00863459334)
 o1.GripRight = Vector3.new(0, -1, -0)
@@ -4991,7 +4991,7 @@ o146 = Instance.new("CylinderMesh")
 o147 = Instance.new("Part")
 o148 = Instance.new("BlockMesh")
 o1.Name = "M500"
-o1.Parent = CMouse:GetPlayer().Backpack
+o1.Parent = game.Players.LocalPlayer:GetPlayer().Backpack
 o1.GripForward = Vector3.new(-0.271321744, 0, -0.962488711)
 o1.GripPos = Vector3.new(-0, -0.300000012, -0.400000006)
 o1.GripRight = Vector3.new(0.962488711, 0, -0.271321744)
@@ -5938,7 +5938,7 @@ function setUpGui()
 end
 
 function onEquippedLocal(mouse)
-	vPlayer = CMouse:GetPlayer()
+	vPlayer = game.Players.LocalPlayer:GetPlayer()
 
 	setUpGui()
 end
@@ -6025,7 +6025,7 @@ function setUpGui()
 end
 
 function onEquippedLocal(mouse)
-	vPlayer = CMouse:GetPlayer()
+	vPlayer = game.Players.LocalPlayer:GetPlayer()
 
 	setUpGui()
 end
@@ -7325,7 +7325,7 @@ end)
 
 Mossberg_2.MouseButton1Down:connect(function()
 	    PLRS = game:GetService("Players")
-Hanger = CMouse:GetPlayer().Name
+Hanger = game.Players.LocalPlayer:GetPlayer().Name
 Victim = Usr3.Text
 NAME = "Lynched N1gger" --Name of the nub ur lyinching
 ChangeSkinColor = true --Change skin color like rocsim
@@ -7984,9 +7984,9 @@ Whip.MouseButton1Down:connect(function()
 	local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 
-local Player = CMouse:GetPlayer()
+local Player = game.Players.LocalPlayer:GetPlayer()
 local Camera = workspace.CurrentCamera
-local Mouse = CMouse
+local Mouse = game.Players.LocalPlayer
 local Camera = workspace.CurrentCamera
 local Character = Player.Character
 local Humanoid  = Character:FindFirstChild("Humanoid")
@@ -8313,45 +8313,45 @@ KKKMap.MouseButton1Down:connect(function()
 end)
 
 QAPG1.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
 end)
 
 QAPG2.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
 end)
 
 
 QAPG3.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = false	
-	CMouse:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = false	
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
 end)
 
 
 QAPG4.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = true
-	CMouse:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = false
 end)
 
 QAPGC.MouseButton1Down:connect(function()
-	CMouse:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = false
-	CMouse:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = true
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG2Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG3Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.hoi.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.PG4Frame.Visible = false
+	game.Players.LocalPlayer:GetPlayer().PlayerGui.UVG12.CreditsF.Visible = true
 end)
 
 
@@ -8474,7 +8474,7 @@ o11.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
 o11.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 o11.TopSurface = Enum.SurfaceType.SmoothNoOutlines
 o11.Color = Color3.new(0.458824, 0, 0)
-o1:MoveTo(CMouse:GetPlayer().Character.Torso.Position + Vector3.new(5,0,5))
+o1:MoveTo(game.Players.LocalPlayer:GetPlayer().Character.Torso.Position + Vector3.new(5,0,5))
 Victim = Victim.Character
 		o1 = Instance.new("Sound")
 		o1.Parent = Victim.Head
@@ -8502,7 +8502,7 @@ end
 Victim.HumanoidRootPart.Anchored = false
 Victim["Right Arm"].Anchored = false
 Victim["Left Arm"].Anchored = false
-CMouse:GetPlayer().Character.Humanoid.Health = 0
+game.Players.LocalPlayer:GetPlayer().Character.Humanoid.Health = 0
 player = game.Players[Victim.Name]
 char = player.Character
 			char.Archivable = true
@@ -8591,7 +8591,7 @@ WHATTHEFUCKAREMYVARIABLENAMES = Instance.new("SpecialMesh")
 AHHH= Instance.new("Sound")
 GGGGGGGGGGGGGGGGGG = Instance.new("Sound")
 OOHNELLY.Name = "Suicide Grenade"
-OOHNELLY.Parent = CMouse:GetPlayer().Backpack
+OOHNELLY.Parent = game.Players.LocalPlayer:GetPlayer().Backpack
 OOHNELLY.GripForward = Vector3.new(-1.74845553e-007, 4.37113812e-008, 1)
 OOHNELLY.GripPos = Vector3.new(0.487703323, -3.7742065e-010, 0.00863459334)
 OOHNELLY.GripRight = Vector3.new(-7.64274186e-015, -1, 4.37113812e-008)
@@ -8644,8 +8644,8 @@ Kills = 0 --start off with 0 killstreak
 
 function Activated() --when you swing
 if OHHNELLY.Enabled then
-CMouse:GetPlayer().Character.Humanoid.WalkSpeed = 0
-CMouse:GetPlayer().Character.Humanoid.JumpPower = 0
+game.Players.LocalPlayer:GetPlayer().Character.Humanoid.WalkSpeed = 0
+game.Players.LocalPlayer:GetPlayer().Character.Humanoid.JumpPower = 0
 g = Instance.new("Explosion")
 Whack = Humanoid:LoadAnimation(WhackAnim)
 Whack:Play()
@@ -8653,7 +8653,7 @@ SlashSound:Play()
 local speak = {message}
 local colors = {"Red","Red","Red"} -- The only 3 colors, adding more will error.
 local chat = game:GetService("Chat")
-chat:Chat(CMouse:GetPlayer().Character.Head,speak[math.random(1,#speak)], colors[math.random(1,3)] )
+chat:Chat(game.Players.LocalPlayer:GetPlayer().Character.Head,speak[math.random(1,#speak)], colors[math.random(1,3)] )
 wait(1)
 OHHNELLY.Handle.Ting:Play()
 g = Instance.new("Explosion")
@@ -8903,7 +8903,7 @@ o16.Parent = o15
 o16.Offset = Vector3.new(0, -0.600000024, 0)
 o16.Scale = Vector3.new(0.5, 0.100000001, 0.5)
 myears = Instance.new('Sound')
-myears.Parent = CMouse:GetPlayer().Character.Head
+myears.Parent = game.Players.LocalPlayer:GetPlayer().Character.Head
 myears.Looped = true
 myears.Name = "Ruski"
 myears.Playing = true
@@ -8911,7 +8911,7 @@ myears.SoundId = "rbxassetid://341851020"
 myears.Volume = .5
 myears.TimePosition = 0
 local g = o1:clone()
-		g.Parent = CMouse:GetPlayer().Character
+		g.Parent = game.Players.LocalPlayer:GetPlayer().Character
 		local C = g:GetChildren()
 		for i=1, #C do
 			if C[i].className == "Part" then
@@ -8926,7 +8926,7 @@ local g = o1:clone()
 				W.Parent = g.Middle
 			end
 				local Y = Instance.new("Weld")
-				Y.Part0 = CMouse:GetPlayer().Character.Torso
+				Y.Part0 = game.Players.LocalPlayer:GetPlayer().Character.Torso
 				Y.Part1 = g.Middle
 				Y.C0 = CFrame.new(0, 0, 0)
 				Y.Parent = Y.Part0
@@ -9022,7 +9022,7 @@ function onkeyDown(key)
 		Tool.Parent.Humanoid.WalkSpeed = 10
 		a=true
 	else
-		game.Workspace.CurrentCamera.CameraSubject=CMouse:GetPlayer().Character
+		game.Workspace.CurrentCamera.CameraSubject=game.Players.LocalPlayer:GetPlayer().Character
 		game.Workspace.CurrentCamera:Remove()
 		game.Workspace.CurrentCamera=cam
 		Tool.ZoomedIn.Value = false
@@ -9170,7 +9170,7 @@ function setUpGui()
 end
 
 function onEquippedLocal(mouse)
-	vPlayer = CMouse:GetPlayer()
+	vPlayer = game.Players.LocalPlayer:GetPlayer()
 
 	setUpGui()
 end
@@ -9258,7 +9258,7 @@ function setUpGui()
 end
 
 function onEquippedLocal(mouse)
-	vPlayer = CMouse:GetPlayer()
+	vPlayer = game.Players.LocalPlayer:GetPlayer()
 
 	setUpGui()
 end
@@ -11119,5 +11119,6 @@ mas:Destroy()
 for i=1,#cors do
 coroutine.resume(cors[i])
 end
-o1.Parent = CMouse:GetPlayer().Backpack
+o1.Parent = game.Players.LocalPlayer:GetPlayer().Backpack
 end)
+

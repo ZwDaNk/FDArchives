@@ -1,1 +1,1 @@
-for scripts from 2018M+
+for scripts backported to older versions

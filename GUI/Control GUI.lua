@@ -8,7 +8,7 @@ TextBox = Instance.new("TextBox")
 -- Properties
 
 ControlGui.Name = "ControlGui"
-ControlGui.Parent = plr.PlayerGui
+ControlGui.Parent = game.CoreGui
 
 Frame.Parent = ControlGui
 Frame.BackgroundColor3 = Color3.new(1, 1, 1)
